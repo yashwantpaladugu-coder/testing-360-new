@@ -1,6 +1,6 @@
 /* Load site/pages/items from Google Sheets (gviz) and render site.
    Items list is independent of pages: no auto-filtering by page. */
-var spreadsheetID = "1cmVjh_ykYaIhCpVW43DItf6WEeidi6OopCvQsrso0d8";
+var spreadsheetID = "1lfpDeJ6yAIUBsdLRKh6IjUEhj2kQEsYNb5IouzAq1jM";
 var siteSheet  = "1569296108";
 var pagesSheet = "28080804";
 var itemsSheet = "0";
@@ -58,7 +58,7 @@ function clearFilters(collapse) {
   if (collapse) $sb.hide();
 }
 
-/* ---------- local XLSX â GViz-like ---------- */
+/* ---------- local XLSX Ã¢ÂÂ GViz-like ---------- */
 function sheetToGViz(ws) {
   const aoa = XLSX.utils.sheet_to_json(ws, { header: 1, blankrows: false, defval: null });
   if (!aoa.length) return { cols: [], rows: [] };
@@ -529,7 +529,7 @@ function itemsDataTable(itemsJsonData) {
           });
         });
       
-      // hero â modal by ID
+      // hero Ã¢ÂÂ modal by ID
       var heroFigure = $('.hero').attr('item');
       if (heroFigure) {
         api.rows().every(function () {
